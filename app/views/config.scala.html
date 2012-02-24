@@ -1,0 +1,30 @@
+@(configForm: Form[Config])
+
+@main("Code-Retreat Montpellier : Configuration") {
+    
+  <div id="main_content" class="container_12">
+	
+    <div class="grid_12" style="margin: 40px">
+
+		<h2>Configuration</h2>
+
+		@helper.form(action = routes.Configuration.enregistrer()) {
+	    
+			@helper.checkbox(configForm("inscriptionActive"), 
+			    '_label -> "Inscriptions actives ?", 
+			    '_showConstraints -> false)
+			    
+			@helper.inputText(configForm("inscriptionUrl"), 
+			    '_label -> "Url de la page d'inscription", 
+			    '_showConstraints -> false,
+			    'size -> 50)
+			
+			<input type="submit" value="Enregistrer" /> <a href="@routes.Connexion.logout()">Déconnexion</a>
+			
+		}
+	
+	</div>
+
+  </div>
+}
+  

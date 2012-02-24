@@ -1,0 +1,30 @@
+@(form: Form[Connexion.Login])
+
+@main("Code-Retreat Montpellier : Connexion") {
+    
+  <div id="main_content" class="container_12">
+	
+    <div class="grid_12" style="margin: 40px">
+
+		<h2>Connexion</h2>
+
+		@helper.form(action = routes.Connexion.authentifier()) {
+	    
+			@if(form.hasGlobalErrors) { 
+                <p class="error">
+                    @form.globalError.message
+                </p>
+            }
+			
+			<p>
+                <input type="password" name="password" placeholder="Password" />
+            </p>
+            <p>
+                <button type="submit">Connexion</button>
+            </p>
+		}
+	</div>
+	
+  </div>
+  
+}

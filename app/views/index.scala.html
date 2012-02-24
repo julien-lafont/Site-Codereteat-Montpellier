@@ -1,0 +1,162 @@
+@(inscriptionActives: Boolean, inscriptionUrl: String)
+
+@main("Code-Retreat Montpellier : Expérimentez et partagez vos connaissances ! 24 Mars 2012") {
+    
+    <div id="main_content" class="container_12">
+	
+		<div class="grid_8 featured">
+		
+			<div class="intro">
+				<p class="big">Vous êtes invités au tout premier Code Retreat de Montpellier !</p>
+
+				<p>Un Code Retreat une journée intense de code, mettant le focus sur les principes fondamentaux de développement logiciel. Les programmeurs de tous les langages sont invités - ça permet de brasser et challenger les idées. Six séances de 45 minutes permettent de vous exercer en paire dans un environnement sans contrainte. Après 45 minutes, le code est effacé avant de préparer la session suivante. On débriefe. On change de binôme (et si possible de langage de programmation). Et on recommence.</p>
+
+				<p>Chaque séance est un challenge différent. C'est l'occasion idéale pour tester de nouvelles pratiques, expérimenter de nouvelles technos. La force du groupe est sa diversité, c'est pourquoi nous avons besoin de vous.</p>
+
+				<p>Si vous êtes intéressé, vous n'avez besoin que de votre portable avec votre (ou vos nombreux) environnement de développement. La préférence est donnée au TDD, alors un environnement de test est indispensable.</p>
+
+				<p>L'évènement a lieu le 24 mars, et s'inscrit dans le mouvement du Software Craftsmanship sudiste en pleine croissance !</p>
+				
+			</div>
+					
+		</div>
+		
+		<div class="grid_4">
+			
+			<div class="signup">
+				@if(inscriptionActives) {
+				  
+				<div class="newsletter">
+			
+					<h2>Inscriptions ouvertes</h2>
+				
+					<h3>Samedi 24 mars 2012</h3>
+					<h3 class="ville">Montpellier centre</h3>
+					
+					<div class="plan">
+						<a href="http://maps.google.fr/maps/ms?msid=203077170975900753692.0004b9a8f571a5f70ab0d&msa=0&ll=43.609307,3.876075&spn=0.006347,0.008851&iwloc=0004b9a9009b39cf718b5">
+							<img src="@routes.Assets.at("images/gmap.png")" />
+							<span><strong>Epitech</strong>, 16 boulevard du jeu de Paume</span>
+						</a>		
+					</div>
+					
+					<div class="clear"></div>
+					
+					<div class="inscription">
+						<a href="@inscriptionUrl">Réservez votre place </a>
+					</div>
+					
+					<p class="avert">Ne tardez pas, uniquement 24 places sont disponibles !</p>
+				
+				</div>
+				  
+				} else {
+				
+				<div class="newsletter">
+			
+					<h2>Réservations</h2>
+				
+					<h3>Samedi 24 mars 2012</h3>
+					<h3 class="ville">Montpellier centre</h3>
+					
+					<p class="big">Les inscriptions ouvriront en <strong>début de semaine prochaine</strong>, suivez notre compte <a href="http://www.twitter.com/codeRetreatMtp" target="_blank"><img src="@routes.Assets.at("images/minitwitter2.png")" alt="Twitter" /></a> pour être averti immédiatement.</p>
+					<p class="big">Les places seront limitées alors ne tardez pas !</p>
+					
+					<div class="clear"></div>
+					
+					<div class="inscription ferme">
+						<a href="#">Réservez votre place </a>
+					</div>
+					<div class="soon">Bientôt !</div>
+				
+				</div>
+				
+				}
+			
+			</div>
+			
+		</div>
+		
+		<div class="clear"></div>
+		
+		<h1 class="partenaires">Partenaires de l'évènement</h1>
+		
+		<div class="grid_4">
+			<div class="box">
+				<h3>Jug Montpellier</h3>
+				<hr />
+				<p>
+					<a href="http://www.jug-montpellier.org" target="blank">
+						<img src="@routes.Assets.at("images/mtpjug.png")" alt="Montpellier Jug" />
+					</a>
+				</p>
+			</div>
+		</div>
+		
+		<div class="grid_4">
+			<div class="box">
+				<h3>Zenexity</h3>
+				<hr />
+				<p>
+					<a href="http://www.zenexity.com" target="blank">
+						<img src="@routes.Assets.at("images/zenexity.png")" alt="Zenexity" />
+					</a>
+				</p>
+			</div>
+		</div>
+		
+		<div class="grid_4">
+			<div class="box">
+				<h3>Epitech</h3>
+				<hr />
+				<p>
+					<a href="http://www.epitech.eu" target="blank">
+						<img src="@routes.Assets.at("images/epitech.png")" alt="Epitech" />
+					</a>
+				</p>
+			</div>
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="grid_12 twitter">
+			<div class="callto">
+				<a href="http://www.twitter.com/codeRetreatMtp" target="_blank">
+					<span class="calltoaction"><img class='alignleft_action' src='@routes.Assets.at("images/twitter.png")' alt=''/> Suivez les dernières actualité sur notre compte twitter @@CodeRetreatMtp</span>
+				</a>
+			</div>
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="grid_7">
+			<div class="feat">
+				<h4>Plus d'infos ?</h4>
+				<hr />
+				<p>Nous remercions <a href="http://antoine.vernois.net/dotclear/" target="_blank">Antoine Vernois</a> qui nous fera le plaisir de venir en tant que facilitateur pour cette première édition. Nous adoptons la même formule éprouvée et adoptée un peu partout dans le monde.</p>
+				
+				<ul class="checklist">
+					<li>Durée : 8h30 à 17h30 </li>
+					<li>Durée des séances : 45mn suivi de 15mn de débriefing</li>
+					<li>Petit déjeuner et repas servi sur place</li>
+					<li>Vous êtes libre sur les technos, les langages et les environnements de développement</li>
+					<li>Bien évidemment, l'entrée est <strong>gratuite</strong>, mais l'inscription est obligatoire</li>
+				</ul>
+			
+				<p>Nous comptons sur vous pour nous prévenir dés que possible en cas de désistement pour avoir le temps d'inviter une personne en liste d'attente.</p>
+				
+				<p class="infos">Pour plus d'informations, n'hésitez pas à nous contacter par <a href="mailto:contact.cr.montpellier@@gmail.com">email</a> ou sur <a href="http://www.twitter.com/codeRetreatMtp" target="_blank">twitter</a>.</p>
+			</div>
+		</div>
+		
+		<div class="grid_5 feat">
+		
+			<h4>Localisation ?</h4>
+			<hr />
+
+			<iframe width="375" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.fr/maps/ms?msa=0&amp;msid=203077170975900753692.0004b9a8f571a5f70ab0d&amp;ie=UTF8&amp;ll=43.607863,3.87367&amp;spn=0,0&amp;t=w&amp;output=embed"></iframe><p style="text-align:center"><a href="http://maps.google.fr/maps/ms?msa=0&amp;msid=203077170975900753692.0004b9a8f571a5f70ab0d&amp;ie=UTF8&amp;ll=43.607863,3.87367&amp;spn=0,0&amp;t=w&amp;source=embed" target="_blank" style="color:#000">Ouvrir le plan</a></p>
+		</div>
+	
+	</div>
+    
+}
