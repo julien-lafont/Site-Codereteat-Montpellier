@@ -11,23 +11,24 @@ import views.html.*;
 
 /**
  * Configuration du site web
+ * 
  * @author julienlafont
- *
+ * 
  */
 @Security.Authenticated(Secured.class)
 public class Configuration extends Controller {
 
 	public static Result index() {
 		if (!Secured.isLogged()) return unauthorized();
-		
+
 		Form<Config> configForm = form(Config.class).fill(Config.getMainConfig());
-		
+
 		return ok(config.render(configForm));
 	}
 
 	public static Result enregistrer() {
 		if (!Secured.isLogged()) return unauthorized();
-		
+
 		Form<Config> configForm = form(Config.class).bindFromRequest();
 
 		if (configForm.hasErrors()) {
@@ -38,10 +39,5 @@ public class Configuration extends Controller {
 			return ok(config.render(configForm));
 		}
 	}
-	
-	
-
-	
-	
 
 }
