@@ -42,16 +42,16 @@
 	<div class="clear"></div>
 
 	@if(flash.contains("success")) {
-        <p class="success">
-        	@flash.get("success")
-         </p>
-    }
+		<p class="success">
+			@flash.get("success")
+		</p>
+	}
 
 	@if(flash.contains("error")) {
-        <p class="success">
-        	@flash.get("error")
-         </p>
-    }
+		<p class="success">
+			@flash.get("error")
+		</p>
+	}
 
 	@content
 

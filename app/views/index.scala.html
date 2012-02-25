@@ -24,54 +24,51 @@
 		<div class="grid_4">
 			
 			<div class="signup">
-				@if(inscriptionActives) {
-				  
-				<div class="newsletter">
-			
-					<h2>Inscriptions ouvertes</h2>
-				
-					<h3>Samedi 24 mars 2012</h3>
-					<h3 class="ville">Montpellier centre</h3>
-					
-					<div class="plan">
-						<a href="http://maps.google.fr/maps/ms?msid=203077170975900753692.0004b9a8f571a5f70ab0d&msa=0&ll=43.609307,3.876075&spn=0.006347,0.008851&iwloc=0004b9a9009b39cf718b5">
-							<img src="@routes.Assets.at("images/gmap.png")" />
-							<span><strong>Epitech</strong>, 16 boulevard du jeu de Paume</span>
-						</a>		
-					</div>
-					
-					<div class="clear"></div>
-					
-					<div class="inscription">
-						<a href="@inscriptionUrl">Réservez votre place </a>
-					</div>
-					
-					<p class="avert">Ne tardez pas, uniquement 24 places sont disponibles !</p>
-				
-				</div>
-				  
-				} else {
 				
 				<div class="newsletter">
+				
+					@if(inscriptionActives) { 
 			
-					<h2>Réservations</h2>
+						<h2>Inscriptions ouvertes</h2>
+					
+						<h3>Samedi 24 mars 2012</h3>
+						<h3 class="ville">Montpellier centre</h3>
+						
+						<div class="plan">
+							<a href="http://maps.google.fr/maps/ms?msid=203077170975900753692.0004b9a8f571a5f70ab0d&msa=0&ll=43.609307,3.876075&spn=0.006347,0.008851&iwloc=0004b9a9009b39cf718b5">
+								<img src="@routes.Assets.at("images/gmap.png")" />
+								<span><strong>Epitech</strong>, 16 boulevard du jeu de Paume</span>
+							</a>		
+						</div>
+						
+						<div class="clear"></div>
+						
+						<div class="inscription">
+							<a href="@inscriptionUrl">Réservez votre place </a>
+						</div>
+						
+						<p class="avert">Ne tardez pas, uniquement 24 places sont disponibles !</p>
 				
-					<h3>Samedi 24 mars 2012</h3>
-					<h3 class="ville">Montpellier centre</h3>
+					} else {
 					
-					<p class="big">Les inscriptions ouvriront en <strong>début de semaine prochaine</strong>, suivez notre compte <a href="http://www.twitter.com/codeRetreatMtp" target="_blank"><img src="@routes.Assets.at("images/minitwitter2.png")" alt="Twitter" /></a> pour être averti immédiatement.</p>
-					<p class="big">Les places seront limitées alors ne tardez pas !</p>
+						<h2>Réservations</h2>
 					
-					<div class="clear"></div>
-					
-					<div class="inscription ferme">
-						<a href="#">Réservez votre place </a>
-					</div>
-					<div class="soon">Bientôt !</div>
+						<h3>Samedi 24 mars 2012</h3>
+						<h3 class="ville">Montpellier centre</h3>
+						
+						<p class="big">Les inscriptions ouvriront en <strong>début de semaine prochaine</strong>, suivez notre compte <a href="http://www.twitter.com/codeRetreatMtp" target="_blank"><img src="@routes.Assets.at("images/minitwitter2.png")" alt="Twitter" /></a> pour être averti immédiatement.</p>
+						<p class="big">Les places seront limitées alors ne tardez pas !</p>
+						
+						<div class="clear"></div>
+						
+						<div class="inscription ferme">
+							<a href="#">Réservez votre place </a>
+						</div>
+						<div class="soon">Bientôt !</div>
 				
+					}
+					
 				</div>
-				
-				}
 			
 			</div>
 			

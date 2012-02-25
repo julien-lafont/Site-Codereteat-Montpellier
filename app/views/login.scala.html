@@ -11,10 +11,10 @@
 		@helper.form(action = routes.Connexion.authentifier()) {
 	    
 			@if(form.hasGlobalErrors) { 
-                <p class="error">
-                    @form.globalError.message
-                </p>
-            }
+				<p class="error">
+					@form.globalError.message
+				</p>
+			}
 			
 			<p>
                 <input type="password" name="password" placeholder="Password" />
@@ -23,6 +23,7 @@
                 <button type="submit">Connexion</button>
             </p>
 		}
+		
 	</div>
 	
   </div>
