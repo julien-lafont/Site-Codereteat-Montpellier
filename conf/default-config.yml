@@ -5,4 +5,4 @@ configs:
     - !!models.Config
         id: 1
         inscriptionActive: false
-        inscriptionUrl: http://coderetreatmtp.eventbrite.com
+        inscriptionUrl: http://www.soon.fr
